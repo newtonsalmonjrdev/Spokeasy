@@ -1,0 +1,41 @@
+const skyboxUrl="https://raw.githubusercontent.com/newtonsalmonjrdev/CesiumWorldMusicGenres/main/skybox_darkblue.jpg";
+var widget = new Cesium.CesiumWidget("cesiumContainer", {
+        // Use high-res stars downloaded from https://github.com/AnalyticalGraphicsInc/cesium-assets
+        skyBox: new Cesium.SkyBox({
+          sources: {
+            positiveX:
+              skyboxUrl,
+            negativeX:
+              skyboxUrl,
+            positiveY:
+              skyboxUrl,
+            negativeY:
+              skyboxUrl,
+            positiveZ:
+              skyboxUrl,
+            negativeZ:
+            skyboxUrl,
+          },
+        }),
+      });
+      // Show Columbus View map with Web Mercator projection
+  widget.camera.lookAt(
+    Cesium.Cartesian3.fromDegrees(-98.0, 40.0),
+    new Cesium.Cartesian3(0.0, -1000000.0, 9000000.0)
+  );
+  widget.camera.lookAtTransform(Cesium.Matrix4.IDENTITY);
+      var previousTime = Date.now();
+      var spinRate = 0.2;
+
+      function applyGlobeSpin() {
+        var currentTime = Date.now();
+        var delta = (currentTime - previousTime) / 1000;
+        previousTime = currentTime;
+        widget.scene.camera.rotate(Cesium.Cartesian3.UNIT_Z, -spinRate * delta);
+      }
+
+      function startSpinGlobe() {
+        previousTime = Date.now();
+        widget.clock.onTick.addEventListener(applyGlobeSpin);
+      }
+      startSpinGlobe();
