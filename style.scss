@@ -87,7 +87,6 @@ canvas {
   border-width: 25px;
   border-style: solid;
   border-color: black;
-  /* border-top-color: #a9d161; */
   border-radius: 50%;
   background-color: transparent;
   animation-name: spin;
@@ -106,7 +105,6 @@ canvas {
 .title {
   color: white;
   -webkit-text-stroke: 2px black;
-  /* text-shadow: 2px 2px 5px black; */
   font-size: 30pt;
 }
 
@@ -140,7 +138,6 @@ canvas {
   border-width: 25px;
   border-style: solid;
   border-color: black;
-  /* border-top-color: #a9d161; */
   border-radius: 50%;
   background-color: transparent;
   animation-name: spin;
@@ -191,8 +188,6 @@ canvas {
   top: 275px;
   left: 445px;
   opacity: 0.8;
-  /* animation: spin 2.5s steps(2) 5s infinite;
-  -webkit-animation: spin 2.5s infinite; */
 }
 
 .radEnd {
@@ -205,7 +200,6 @@ canvas {
   top: 275px;
   left: 445px;
   opacity: 0.8;
-
   animation: spin 3s ease-out 2s;
   -webkit-animation: spin 3s;
 }
@@ -215,7 +209,6 @@ canvas {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%) scaleX(-1);
-  /* transform: scaleX(-1); */
 }
 
 .smallradial {
@@ -299,7 +292,6 @@ body::before {
     top: 570px;
     position: relative;
     left: -1px;
-    /* transform: translate(-50%, -50%); */
   }
 }
 
@@ -339,7 +331,6 @@ body::before {
     top: 485px;
     position: relative;
     left: 10px;
-    /* transform: translate(-50%, -50%); */
   }
 }
 
@@ -369,7 +360,6 @@ body::before {
     top: 430px;
     position: relative;
     left: 76px;
-    /* transform: translate(-50%, -50%); */
   }
   .outsidebox {
     display: none;
